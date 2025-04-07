@@ -9,7 +9,7 @@
 ## 🚀 ¿Cómo acceder?
 1️⃣ Clona el repositorio:
 ```bash
-[git clone https://github.com/tu-usuario/ExtraClassAED_01.git](https://github.com/sowTecsup/TecsupLinkedLists)
+git clone https://github.com/sowTecsup/TecsupLinkedLists
 ```
 2️⃣ Abre el proyecto en **Unity y Visual Studio**.
 3️⃣ Explora los archivos y resuelve los ejercicios.
