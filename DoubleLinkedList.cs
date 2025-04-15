@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class DoubleLinkedList<T> : MonoBehaviour
 {
-    public Node<T> head = null;
-    public Node<T> last = null;
+    #region Settings
+    private Node<T> head = null;
+    private Node<T> last = null;
 
-    public int count = 0;
+    private int count = 0;
+    #endregion
+    #region Getters
+    public Node<T> Head => head;
+    public Node<T> Last => last;
 
+    public int Count => count;
+    #endregion
+
+    #region Methods
+    #region Add
     /// <summary>
     /// Añado un tipo cualquiera de valor como puede ser int list string float etc etc
     /// y añade a la lista 
@@ -31,7 +41,8 @@ public class DoubleLinkedList<T> : MonoBehaviour
 
         last = newNode;
     }
-
+    #endregion
+    #region Seek
     public Node<T> Seek(T objective, Node<T> _head = null, int deep = 0)
     {
         if (head == null || deep >= count)
@@ -92,7 +103,8 @@ public class DoubleLinkedList<T> : MonoBehaviour
 
         return Seek(_pos).Next;
     }
-
+    #endregion
+    #region Read
     public virtual void ReadFromStart(Node<T> _head = null, int deep = 0)
     {
         if (head == null || deep >= count) return;
@@ -119,7 +131,8 @@ public class DoubleLinkedList<T> : MonoBehaviour
 
         ReadFromEnd(_last.Prev, deep + 1);
     }
-
+    #endregion
+    #region Remove
     public virtual void Remove(T objective)
     {
         Node<T> node = Seek(objective);
@@ -167,4 +180,6 @@ public class DoubleLinkedList<T> : MonoBehaviour
         last = null;
         count = 0;
     }
+    #endregion
+    #endregion
 }
